@@ -14,13 +14,14 @@ This **Firefox extension automates unfollowing** on LinkedIn. No more manual cli
 
 ---
 
-## ✨ **Key Features (v2.0)**  
-This extension has been fully upgraded to meet Mozilla's strict 2026 AMO criteria and features a premium user experience.
+## ✨ **Key Features**  
+Built to meet Mozilla's 2026 AMO requirements, with a clean, transparent user experience.
 
 - **Zero Data Collection:** Built strictly on local APIs with zero telemetry, data gathering, or external analytics (`data_collection_permissions: none`).
-- **Anti-Bot Evasion Tactics:** Employs randomized cooldown delays (between 1.5s - 3.5s) instead of easily detectable static timers.
-- **Infinite Scroll Jiggle:** Uses advanced scroll mechanics to trick LinkedIn's lazy-loading IntersectionObservers, ensuring it doesn't get stuck at the bottom of the page.
-- **Premium Glassmorphic UI:** A beautiful, responsive, and secure UI system replacing standard popups. 
+- **Human-Like Pacing:** Uses randomized delays (roughly 1–3.5 seconds) between actions to space out requests and avoid overloading LinkedIn.
+- **Smart Scrolling:** Gently scrolls to load more entries so the cleanup continues to the end of long lists instead of stopping early.
+- **On-Page Control Panel:** A live overlay shows how many people have been unfollowed, the current status, and a **Stop** button so you stay in control at all times.
+- **Runs Only When You Ask:** Nothing happens automatically — the extension only acts after you click a button, and only on LinkedIn's follow-management pages.
 - **Manifest V3 Compliant:** Future-proofed against Firefox's upcoming WebExtension deprecations.
 
 ---
@@ -38,7 +39,7 @@ It is your sole responsibility to ensure your use complies with platform guideli
 ## 🛠 **How to Install**  
 
 ### 🔹 **Install on Firefox (Temporary/Developer Mode)**  
-1. **Download the ZIP file** (`linkedin_mass_unfollower-1.0.zip`) from [GitHub Releases](https://github.com/llewellynvz/LinkedIn-Mass-Unfollower/releases).  
+1. **Download the ZIP file** (`linkedin-mass-unfollower-2.0.zip`) from [GitHub Releases](https://github.com/llewellynvz/LinkedIn-Mass-Unfollower/releases).  
 2. **Open Firefox**.  
 3. Type **`about:debugging#/runtime/this-firefox`** in the address bar.
 4. Click **"Load Temporary Add-on"** and select the `.zip` file (or the extracted `manifest.json`).  
@@ -51,10 +52,11 @@ It is your sole responsibility to ensure your use complies with platform guideli
 ## 🚀 **How to Use**  
 1️⃣ Click the extension icon in your toolbar.  
 2️⃣ Choose your target:  
-   - **Start Unfollowing (Following)** → Unfollows people you chose to follow.
-   - **Unfollow Followers** → Unfollows people LinkedIn officially added to your feed.  
-3️⃣ Leave the LinkedIn tab open. The extension will securely unfollow users one by one, scroll down to load more, and alert you when complete.
-4️⃣ It deliberately leaves a small handful of users (approx. 9) untouched at the end to avoid tripping extreme bot flags.
+   - **Start Unfollowing (Following)** → Unfollows accounts in your *Following* list.
+   - **Unfollow Followers** → Works through your *Followers* management page.  
+3️⃣ Leave the LinkedIn tab open. An on-page panel (top-right) shows a live count and status while it unfollows users one by one and scrolls to load more.  
+4️⃣ You can click **Stop** in that panel at any time. When a section is finished, the panel offers to **continue with the other section** or close.  
+5️⃣ If LinkedIn shows a security check, the extension **pauses automatically** so you can resolve it safely before continuing.
 
 ---
 

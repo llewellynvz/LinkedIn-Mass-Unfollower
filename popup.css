@@ -1,22 +1,20 @@
 /* General Glassmorphism Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    width: 450px;
-    height: auto;
+    width: 360px;
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #fff;
-    overflow: hidden;
 }
 
 /* Container */
 .glass-container {
     width: 100%;
-    max-width: 450px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -134,64 +132,4 @@ body {
     padding: 12px;
     background: rgba(0, 0, 0, 0.15);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Dynamic overlay popup styles (used in popup.js) */
-.glass-overlay {
-    position: fixed; 
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    background: rgba(0, 0, 0, 0.6); z-index: 9999;
-    backdrop-filter: blur(4px);
-    display: flex; justify-content: center; align-items: center;
-}
-
-.glass-popup-box {
-    width: 320px; 
-    background: rgba(255, 255, 255, 0.15); 
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    overflow: hidden; display: flex; flex-direction: column;
-    box-shadow: 0px 8px 32px rgba(0,0,0,0.4);
-    backdrop-filter: blur(16px);
-}
-
-.glass-popup-header {
-    background: rgba(0, 141, 161, 0.8); 
-    color: white; padding: 15px;
-    font-size: 16px; font-weight: 700; text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.glass-popup-body {
-    flex-grow: 1; color: white;
-    padding: 20px; font-size: 14px; text-align: center;
-    background: rgba(0, 0, 0, 0.2);
-    line-height: 1.5;
-}
-
-.glass-popup-footer {
-    display: flex; justify-content: space-around; padding: 15px;
-    background: rgba(0, 0, 0, 0.3);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.glass-button {
-    background: rgba(255, 255, 255, 0.1); color: white; 
-    padding: 10px 16px; font-weight: 600;
-    border: 1px solid rgba(255, 255, 255, 0.3); 
-    border-radius: 8px; cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.glass-button:hover {
-    background: rgba(255, 255, 255, 0.25);
-}
-
-.glass-button.confirm {
-    background: rgba(0, 141, 161, 0.7);
-    border-color: rgba(0, 141, 161, 1);
-}
-
-.glass-button.confirm:hover {
-    background: rgba(0, 141, 161, 0.9);
 }

@@ -22,3 +22,10 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Throwaway local test harness (mock LinkedIn page for the unfollow engine)
+test/
+console-export-*.log
+ruvector.db
+.playwright-mcp/
+mu-mock-test-result.png

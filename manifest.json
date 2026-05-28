@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "LinkedIn Mass Unfollower",
-  "version": "1.0",
+  "version": "2.0",
   "description": "Automatically unfollow all your LinkedIn connections.",
   "browser_specific_settings": {
     "gecko": {
@@ -19,9 +19,7 @@
   },
   "permissions": [
     "tabs",
-    "scripting",
-    "activeTab",
-    "notifications"
+    "storage"
   ],
   "host_permissions": [
     "https://www.linkedin.com/*"
